@@ -1,0 +1,56 @@
+ALGORITHM insertion array
+VAR
+   tab : ARRAY_OF INTEGER[5]; //We have 5 integers
+   1 : INTEGER; //counter are of type integers (a whole number) sum: 
+   INTEGER:= 0; //the result of the addition of the numbers
+BEGIN //start here
+FOR 1 FROM 0 TO tab. length STEP 1 DO //counting from 1 to tab which is 5
+    Write("Enter a number:") //The number we want to read
+    Read(tab[i]);// insert from user {4, 0, 9, 6, 1}
+    sum = sum + tab[i]; //
+    // tab[0] = 4
+    // tab[1] = 0  
+    // tab[2] = 9
+    // tab[3] = 6
+    // tab[4] = 1
+END_FOR //End reading
+    Write ("The sum is") //When we arrive at the number we read
+    Write (sum);//20
+END
+ALGORITHM sentence
+VAR
+// the sentence is a variable called *sentence
+    sentence:STRING; 
+    SLength, NbWords, NbVowels,i,p,b:INTEGER;
+
+BEGIN
+
+//**step1:Read the sentence as it was an array***// 
+read (sentence)
+
+//** step2:Calculate the length of the sentence, while the "." is not reached incremnt the length ***//
+WHILE (sentence[i] <> ".") DO
+    SLength:=SLength+1;
+    i = i+1;
+END_WHILE
+
+//**  step3: Calculate the numbers of words by calculating the Nb of spaces ***//
+WHILE (p<SLength) DO
+    IF (sentence[P]=" ") THEN
+    NbWords : = NbWords+1
+    p : = p+1;
+    END_IF
+END_WHILE
+
+    //**  step4: Calculation of the NB of Vowels which are "a" "e" "i" "o" "u"// S WITH (vowels) ***//
+
+WHILE (B<SLength)
+IF (sentence[B]="a" OR sentence[B]="e" OR sentence[B]="i" OR sentence[B]="o" OR sentence[B]="u") THEN
+    NbVowels : = NbVowels+1;
+    b : = b+1;
+END_IF
+END_WHILE
+
+    write(SLength, NbWords, NbVowels);
+
+END
